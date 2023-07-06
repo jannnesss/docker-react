@@ -1,19 +1,8 @@
 version: '3'
-services: 
+services:
   web:
     build:
       context: .
-      dockerfile: Dockerfile.dev
-    ports: 
-      - "3000:3000"
-    volumes:
-      - /home/node/app/node_modules
-      - /home/jan/Coding/private/Docker/frontend:/home/node/app
-  test: # Downside of this approach: no interactive session by default
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    volumes:
-      - /home/node/app/node_modules
-      - /home/jan/Coding/private/Docker/frontend:/home/node/app
-    command: ["npm", "run", "test"]
+      dockerfile: Dockerfile
+    ports:
+      - '80:80'

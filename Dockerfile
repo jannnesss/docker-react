@@ -16,5 +16,6 @@ RUN npm run build
 
 # Set up web server
 FROM nginx
+EXPOSE 80
 COPY --from=builder "/home/node/app/build" "/usr/share/nginx/html"
 # No need to startup nginx, is happening by default for this image
