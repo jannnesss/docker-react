@@ -18,8 +18,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
-          application_name: frontend-docker-tutorial
-          environment_name: Frontend-docker-tutorial-env
+          application_name: another-frontend
+          environment_name: Another-frontend-env
           existing_bucket_name: elasticbeanstalk-us-east-1-092720829691
           region: us-east-1
           version_label: ${{ github.sha }}
